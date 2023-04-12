@@ -1,18 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
-body{
-  font-family: sans-serif;
-  position:inherit;
-  height: 100%;
-  width: 100%;
-  background-image: url(images/ws_Bee_Macro_1920x1200.jpg);
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center;
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(0, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
+  color: var(--color-white);
   margin: 0;
 }
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 158, 158, 0.8),
+      rgba(58, 158, 158, 0.7)
+    ),
+  url('https://burst.shopifycdn.com/photos/macbook-air-on-desk.jpg?width=373&format=pjpg&exif=1&iptc=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 h1 {
   font-weight: 400;
   line-height: 1.2;
@@ -52,7 +81,6 @@ button {
 .container {
   width: 100%;
   margin: 3.125rem auto 0 auto;
-  background-color:rgba(239,204,162,0.6);
 }
 
 @media (min-width: 576px) {
@@ -86,7 +114,11 @@ button {
 
 .text-center {
   text-align: center;
-}form {
+}
+
+/* form */
+
+form {
   background: var(--color-darkblue-alpha);
   padding: 2.5rem 0.625rem;
   border-radius: 0.25rem;
@@ -141,7 +173,8 @@ button {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  background-color:rgb(197,143,0);
+  background: var(--color-green);
+  color: inherit;
   border-radius: 2px;
   cursor: pointer;
 }
